@@ -1,0 +1,108 @@
+.video_portfolio {
+  padding: 10rem 5% 6rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.video_portfolio .heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio_intro {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.video_card {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  background: #fff;
+}
+
+.video_card:hover {
+  transform: translateY(-5px);
+}
+
+.hover-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .video_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hamburger icon show/hide */
+#menu_item {
+  display: none;
+  cursor: pointer;
+}
+
+.menu_icon i {
+  font-size: 2.5rem;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.menu_icon.active i::before {
+  content: "\f00d"; /* Font Awesome X icon */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+/* Show nav in mobile */
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    padding: 2rem 3rem;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .navbar.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navbar a {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    color: #333;
+  }
+
+  #menu_item {
+    display: block;
+  }
+}
+
+
+
+
