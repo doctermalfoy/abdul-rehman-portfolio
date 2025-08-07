@@ -75,44 +75,43 @@
 
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contactForm");
-    const messageBox = document.getElementById("formMessage");
+ document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contactForm");
+      const messageBox = document.getElementById("formMessage");
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault(); // prevent page reload
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // prevent page reload
 
-      // Hide previous messages
-      messageBox.style.display = "none";
-      messageBox.textContent = "";
+        // Hide previous messages
+        messageBox.style.display = "none";
+        messageBox.textContent = "";
 
-      const formData = new FormData(form);
+        const formData = new FormData(form);
 
-      try {
-        const response = await fetch("https://formsubmit.co/ajax/doctermalfoy@gmail.com", {
-          method: "POST",
-          headers: { Accept: "application/json" },
-          body: formData,
-        });
+        try {
+          const response = await fetch("https://formsubmit.co/ajax/doctermalfoy@gmail.com", {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: formData,
+          });
 
-        if (response.ok) {
-          messageBox.textContent = "✅ Message sent successfully!";
-          messageBox.style.color = "green";
-          messageBox.style.display = "block";
-          form.reset();
-        } else {
-          messageBox.textContent = "❌ Failed to send. Please try again.";
+          if (response.ok) {
+            messageBox.textContent = "✅ Message sent successfully!";
+            messageBox.style.color = "green";
+            messageBox.style.display = "block";
+            form.reset();
+          } else {
+            messageBox.textContent = "❌ Failed to send. Please try again.";
+            messageBox.style.color = "red";
+            messageBox.style.display = "block";
+          }
+        } catch (error) {
+          messageBox.textContent = "⚠️ Network error. Try again later.";
           messageBox.style.color = "red";
           messageBox.style.display = "block";
         }
-      } catch (error) {
-        messageBox.textContent = "⚠️ Network error. Try again later.";
-        messageBox.style.color = "red";
-        messageBox.style.display = "block";
-      }
+      });
     });
-  });
-
 
 //------------------------responsive---------------------------
   
@@ -136,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
 
 
