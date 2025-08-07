@@ -201,6 +201,7 @@
     Have a project in mind or just want to say hi? Drop a message below.
   </p>
 
+  <!-- Contact Form -->
   <form id="contactForm" class="contact_form">
     <div class="input_row">
       <input type="text" name="name" placeholder="Full Name" required />
@@ -212,17 +213,17 @@
     </div>
     <textarea name="message" rows="6" placeholder="Your Message..." required></textarea>
 
-    <!-- FormSubmit hidden inputs -->
+    <!-- Required for FormSubmit AJAX -->
+    <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="box">
-    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_subject" value="New Contact Form Submission">
+    <input type="hidden" name="_autoresponse" value="Thanks for reaching out! We'll get back to you shortly.">
 
     <button type="submit" class="btn">Send Message</button>
   </form>
 
   <!-- Message area -->
   <div id="formMessage" class="form_message" style="display: none;"></div>
-</section>
-
 
 
 
@@ -290,5 +291,6 @@
     </script>
   </body>
 </html>
+
 
 
