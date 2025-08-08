@@ -89,7 +89,7 @@
         const formData = new FormData(form);
 
         try {
-          const response = await fetch("https://formsubmit.co/ajax/doctermalfoy@gmail.com", {
+          const response = await fetch("https://formsubmit.co/ajax/abdulrehman4780959@gmail.com", {
             method: "POST",
             headers: { Accept: "application/json" },
             body: formData,
@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
 
 
