@@ -403,27 +403,36 @@ section {
 
 /*-----------------------------About----------------------------- */
 /* -----------------------------About Section----------------------------- */
+/* ================= About Section ================= */
 .about {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
-  flex-wrap: nowrap;
-  padding: 10rem 9% 6rem;
-  background: linear-gradient(to bottom right, #fefefe, #e8e8e8);
+  padding: 8rem 9% 6rem;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap; /* allows stacking on small screens */
 }
 
 .about_img {
   flex: 1 1 40%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about_img img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
   border-radius: 1.5rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about_img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .about_content {
@@ -431,148 +440,52 @@ section {
 }
 
 .about_content .heading {
-  font-size: 4.2rem;
-  font-family: 'Oswald', sans-serif;
-  color: var(--text-color);
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #222;
 }
 
 .about_content h3 {
-  font-size: 2.4rem;
-  color: var(--main-color);
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  color: #444;
 }
 
 .about_content p {
-  font-size: 1.6rem;
-  color: #444;
+  font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 3rem;
-  max-width: 95%;
-  font-weight: 400;
+  margin-bottom: 2.5rem;
+  color: #555;
 }
 
 .about_cta {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
-/* --- Tablet (<= 1024px) --- */
-@media (max-width: 1024px) {
-  .about_img img {
-    width: 320px;
-    height: 320px;
-  }
-
-  .about_content .heading {
-    font-size: 3.6rem;
-  }
-
-  .about_content h3 {
-    font-size: 2.1rem;
-  }
-
-  .about_content p {
-    font-size: 1.5rem;
-  }
-}
-
-/* --- Mid Screens (<= 786px) KEEP SIDE-BY-SIDE but scale down --- */
-@media (max-width: 786px) {
+/* Responsive Design */
+@media (max-width: 992px) {
   .about {
-    padding: 8rem 5% 6rem;
-    gap: 3rem;
+    flex-direction: column;
+    text-align: center;
   }
 
-  .about_img img {
-    width: 260px;
-    height: 260px;
+  .about_img,
+  .about_content {
+    flex: 1 1 100%;
   }
 
   .about_content .heading {
-    font-size: 3.2rem;
-  }
-
-  .about_content h3 {
     font-size: 2rem;
   }
 
-  .about_content p {
-    font-size: 1.4rem;
-  }
-
-  .btn {
-    font-size: 1.4rem;
-    padding: 1rem 2.4rem;
-  }
-}
-
-/* --- Small Devices (<= 600px) STACK & CENTER --- */
-@media (max-width: 600px) {
-  .about {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 7rem 5% 5rem;
-  }
-
-  .about_img {
-    margin-bottom: 2rem;
-  }
-
-  .about_img img {
-    width: 200px;
-    height: auto;
-  }
-
-  .about_content {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about_cta {
-    justify-content: center;
-  }
-
-  .about_content .heading {
-    font-size: 2.8rem;
-  }
-
   .about_content h3 {
-    font-size: 1.8rem;
-  }
-
-  .about_content p {
-    font-size: 1.3rem;
-  }
-}
-
-/* --- Extra Small Devices (<= 400px) --- */
-@media (max-width: 400px) {
-  .about_img img {
-    width: 170px;
-  }
-
-  .about_content .heading {
-    font-size: 2.4rem;
-  }
-
-  .about_content h3 {
-    font-size: 1.6rem;
-  }
-
-  .about_content p {
     font-size: 1.2rem;
   }
-
-  .btn {
-    font-size: 1.2rem;
-    padding: 0.9rem 1.6rem;
-  }
 }
+
 
 
 
@@ -910,6 +823,7 @@ section {
     font-size: 1.5rem;
   }
 }
+
 
 
 
