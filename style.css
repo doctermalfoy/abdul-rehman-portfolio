@@ -416,15 +416,12 @@ section {
 .about_img {
   flex: 1 1 40%;
   text-align: center;
-  position: relative;
 }
 
 .about_img img {
   width: 400px;
   height: 400px;
   object-fit: cover;
-  position: absolute;
-  top: 30px;
   border-radius: 1.5rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
@@ -913,6 +910,7 @@ section {
     font-size: 1.5rem;
   }
 }
+
 
 
 
