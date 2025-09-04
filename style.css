@@ -423,7 +423,7 @@ section {
 }
 
 .about_img img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   border-radius: 1.5rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -440,20 +440,20 @@ section {
 }
 
 .about_content .heading {
-  font-size: 2.5rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
   color: #222;
 }
 
 .about_content h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: #444;
 }
 
 .about_content p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.7;
   margin-bottom: 2.5rem;
   color: #555;
@@ -823,6 +823,7 @@ section {
     font-size: 1.5rem;
   }
 }
+
 
 
 
